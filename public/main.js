@@ -1,4 +1,4 @@
-var socket = io.connect('http://45.55.173.148:8080', { 'forceNew': true });
+var socket = io.connect('http://192.168.0.168:8098', { 'forceNew': true });
 
 socket.on('messages', function(data) {  
     console.log(data);
@@ -19,6 +19,7 @@ socket.on('messages', function(data) {
     render(data);
 });
 function addMessage(e) {  
+  console.log("Hola")
     var mensaje = {
     author: document.getElementById('username').value,
     text: document.getElementById('texto').value
